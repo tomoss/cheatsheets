@@ -1,5 +1,11 @@
 # 🐧 Windows Subsystem for Linux (WSL)
 
+### Install WSL
+
+```
+wsl --install
+```
+
 ### Install a Specific Distribution
 
 First, view available distributions online:
@@ -126,6 +132,6 @@ Warning: This deletes all data inside that Linux instance.
 
 ```powershell
 wsl --shutdown
-wsl --unregister <DistributionName>
-wsl --install -d <DistributionName>
+wsl --unregister <DistroName>
+wsl --install -d <DistroName>
 ```

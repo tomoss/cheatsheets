@@ -1,4 +1,3 @@
-# cheatsheets
+# Cheatsheets
 
-### WSL → [HERE](wsl.md)
-
+### 🔹 [WSL](wsl.md)
