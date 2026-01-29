@@ -135,3 +135,19 @@ wsl --shutdown
 wsl --unregister <DistroName>
 wsl --install -d <DistroName>
 ```
+
+### Copy Files from Windows to WSL
+
+**Option A** - Using Windows File Explorer (GUI)
+
+```powershell
+\\wsl$\Ubuntu\home\<linux-user>\
+```
+
+**Option B** - Using PowerShell
+
+```powershell
+wsl cp /mnt/c/Users/<windows-user>/Desktop/file.txt /home/<linux-user>/projects/
+```
+
+
