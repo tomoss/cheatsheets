@@ -65,6 +65,7 @@ g++ -std=gnu++20 main.cpp
 ### Debugging
 
 * `-g` → Adds debugging symbols. Required if you want to use tools like `gdb` or `lldb`.
+
 * `-Og` → Optimize for debugging — roughly between `-O0` and `-O1`. Enables some optimizations that don't interfere with the debugger, giving faster debug builds without losing step accuracy.
 
 ### Optimization
