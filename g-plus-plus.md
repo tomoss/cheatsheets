@@ -70,10 +70,15 @@ g++ -std=gnu++20 main.cpp
 ### Optimization
 
 * `-O0` → No optimization (default).
+
 * `-O1` / `-O2` → Balanced optimization; `-O2` is the standard for release builds.
+
 * `-O3` → Aggressive optimization.
+
 * `-Ofast` → Breaks strict standard compliance for maximum speed.
+
 * `-march=native` → Optimize for the CPU of the machine compiling the code (uses all available SIMD/instruction set extensions). Not portable across different CPU families.
+
 * `-flto` → Link Time Optimization. Allows the compiler to optimize across translation unit boundaries. Significant performance gains on release builds.
 
 ### Disable debugging assertions
@@ -104,7 +109,9 @@ g++ main.o functions.o -o myapp
 ### Inclusion and Linking
 
 * `-I<dir>` → Adds a directory to the include path (where the compiler looks for `.h` files).
+
 * `-L<dir>` → Adds a directory to the library search path.
+
 * `-l<library>` → Links a specific library (e.g., `-lpthread` for threads).
 
 In g++, the syntax for linking a static library (`.a`) and a shared library (`.so`) is exactly the same. When you have both `libfoo.a` and `libfoo.so` available, the linker prefers the shared  (`.so`) version by default.
