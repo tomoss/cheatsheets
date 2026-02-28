@@ -1,19 +1,19 @@
 # GCC / G++ Cheat Sheet
 
-### Common "One-Liner" for Development
+### 🔳 Common "One-Liner" for Development
 
 ```sh
 g++ -std=c++20 -Wall -Wextra -Werror -g main.cpp -o myapp
 ```
 
-### Compile a single C++ file
+### 🔳 Compile a single C++ file
 
 ```sh
 # Compiles and names the output executable myapp.
 g++ main.cpp -o myapp
 ```
 
-### Build stages
+### 🔳 Build stages
 
 ```sh
 # 1) Preprocess only (expand includes/macros)
@@ -29,7 +29,7 @@ g++ -c main.cpp -o main.o
 g++ main.o -o myapp
 ```
 
-### Setting C++ standards
+### 🔳 Setting C++ standards
 
 ```sh
 g++ -std=c++11 main.cpp
@@ -42,7 +42,7 @@ g++ -std=c++23 main.cpp
 g++ -std=gnu++20 main.cpp
 ```
 
-### Warning & Error Handling
+### 🔳 Warning & Error Handling
 
 * `-Wall` → common warnings
 
@@ -62,13 +62,13 @@ g++ -std=gnu++20 main.cpp
 
 * `-fdiagnostics-color=always` → colored diagnostics even when piped (GCC)
 
-### Debugging
+### 🔳 Debugging
 
 * `-g` → Adds debugging symbols. Required if you want to use tools like `gdb` or `lldb`.
 
 * `-Og` → Optimize for debugging — roughly between `-O0` and `-O1`. Enables some optimizations that don't interfere with the debugger, giving faster debug builds without losing step accuracy.
 
-### Optimization
+### 🔳 Optimization
 
 * `-O0` → No optimization (default).
 
@@ -82,19 +82,19 @@ g++ -std=gnu++20 main.cpp
 
 * `-flto` → Link Time Optimization. Allows the compiler to optimize across translation unit boundaries. Significant performance gains on release builds.
 
-### Disable debugging assertions
+### 🔳 Disable debugging assertions
 
 ```sh
 g++ -DNDEBUG main.cpp -o myapp
 ```
 
-### Verbose build
+### 🔳 Verbose build
 
 ```sh
 g++ -v main.cpp -o myapp # verbose: shows compile + link steps
 ```
 
-### Multi-File Compilation
+### 🔳 Multi-File Compilation
 
 ```sh
 # The quick way
@@ -107,7 +107,7 @@ g++ -c main.cpp functions.cpp
 g++ main.o functions.o -o myapp
 ```
 
-### Inclusion and Linking
+### 🔳 Inclusion and Linking
 
 * `-I<dir>` → Adds a directory to the include path (where the compiler looks for `.h` files).
 
@@ -117,7 +117,7 @@ g++ main.o functions.o -o myapp
 
 In g++, the syntax for linking a static library (`.a`) and a shared library (`.so`) is exactly the same. When you have both `libfoo.a` and `libfoo.so` available, the linker prefers the shared  (`.so`) version by default.
 
-### Standard System Libraries
+### 🔳 Standard System Libraries
 
 If the library is already installed in your system folders (like `/usr/include` and `/usr/lib`), you only need the name.
 
@@ -129,7 +129,7 @@ g++ main.cpp -lm -o myapp
 g++ main.cpp -lpthread -o myapp
 ```
 
-### Custom / Third-Party Libraries
+### 🔳 Custom / Third-Party Libraries
 
 If you have a library into a specific folder (e.g., `./libs`), you must provide the paths manually.
 
@@ -141,13 +141,13 @@ g++ main.cpp \
     -o myapp
 ```
 
-### Define macros
+### 🔳 Define macros
 
 ```sh
 g++ -DDEBUG -DVERSION=3 main.cpp -o myapp
 ```
 
-### Sanitizers
+### 🔳 Sanitizers
 
 #### Address + Undefined (most common combo)
 
@@ -163,7 +163,7 @@ g++ -fsanitize=thread -g main.cpp -o myapp
 
 Tip: don’t mix TSan with ASan in the same build.
 
-### The Ultimate "Ironclad" Debug Command
+### 🔳 The Ultimate "Ironclad" Debug Command
 
 ```sh
 g++ -std=c++20 -O0 -g \
@@ -175,7 +175,7 @@ g++ -std=c++20 -O0 -g \
 
 Adding `-fno-omit-frame-pointer` makes the *Stack Trace* much more accurate when ASan triggers.
 
-### Modern Safety: The Stack Protector
+### 🔳 Modern Safety: The Stack Protector
 
 * `-fstack-protector-strong` → Adds guard values to the stack to detect overflows before a function returns.
 

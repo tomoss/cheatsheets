@@ -1,12 +1,12 @@
 # 🐧 Windows Subsystem for Linux (WSL)
 
-### Install WSL
+### 🔳 Install WSL
 
 ```
 wsl --install
 ```
 
-### Install a Specific Distribution
+### 🔳 Install a Specific Distribution
 
 First, view available distributions online:
 
@@ -21,20 +21,20 @@ wsl --install -d <DistroName>
 # Example: wsl --install -d Ubuntu
 ```
 
-### Check Installed Distributions
+### 🔳 Check Installed Distributions
 
 ```powershell
 wsl --list --verbose
 ```
 
-### Set the default distro
+### 🔳 Set the default distro
 
 ```powershell
 wsl --set-default <DistroName>
 # Example: wsl --set-default Ubuntu
 ```
 
-### Verify the default distro
+### 🔳 Verify the default distro
 
 ```powershell
 wsl --status
@@ -42,7 +42,7 @@ wsl --status
 
 *Example output:* `Default Distribution: Ubuntu`
 
-### Start and Connect
+### 🔳 Start and Connect
 
 Optional: start default distro directly
 
@@ -57,7 +57,7 @@ wsl -d <DistroName>
 # Example: wsl -d Debian
 ```
 
-### Run Linux Commands from Windows
+### 🔳 Run Linux Commands from Windows
 
 Run a single command without entering the shell:
 
@@ -72,13 +72,13 @@ Run as root:
 wsl -u root
 ```
 
-### Check WSL Status
+### 🔳 Check WSL Status
 
 ```powershell
 wsl --status
 ```
 
-### Set WSL Version
+### 🔳 Set WSL Version
 
 Set WSL 2 as the global default (recommended):
 
@@ -86,13 +86,13 @@ Set WSL 2 as the global default (recommended):
 wsl --set-default-version 2
 ```
 
-### Start with a Login Shell
+### 🔳 Start with a Login Shell
 
 ```powershell
 wsl --exec bash --login
 ```
 
-### Exit and Stop WSL
+### 🔳 Exit and Stop WSL
 
 Exit the current shell:
 
@@ -106,27 +106,27 @@ Stop all running WSL instances immediately:
 wsl --shutdown
 ```
 
-### Restart
+### 🔳 Restart
 
 ```powershell
 wsl --shutdown
 wsl
 ```
 
-### Verify Installation
+### 🔳 Verify Installation
 
 ```powershell
 wsl --status
 wsl --list --verbose
 ```
 
-### Update WSL Kernel
+### 🔳 Update WSL Kernel
 
 ```powershell
 wsl --update
 ```
 
-### Cleanup / Reset a Distribution
+### 🔳 Cleanup / Reset a Distribution
 
 Warning: This deletes all data inside that Linux instance.
 
@@ -136,7 +136,7 @@ wsl --unregister <DistroName>
 wsl --install -d <DistroName>
 ```
 
-### Copy Files from Windows to WSL
+### 🔳 Copy Files from Windows to WSL
 
 **Option A** - Using Windows File Explorer (GUI)
 
