@@ -214,13 +214,20 @@ g++ main.cpp \
 
 ### 🔳 The "Runtime" Library Fix
 
-When linking a custom library in a local folder (e.g., ./libs), the compiler finds it, but the OS will not find it when you run the program. This flag fixes that.
+When linking a custom library in a local folder (e.g., `./libs`), the compiler finds it, but the OS will not find it when you run the program. This flag fixes that.
 
 ```sh
 # -L tells the compiler where the lib is.
 # -Wl,-rpath tells the EXECUTABLE where the lib is at runtime.
 g++ main.cpp -I./include -L./libs -lcustom -Wl,-rpath,'$ORIGIN/libs' -o myapp
 clang++ main.cpp -I./include -L./libs -lcustom -Wl,-rpath,'$ORIGIN/libs' -o myapp
+```
+
+Alternative → `LD_LIBRARY_PATH` env var
+
+Must be set in every shell/environment
+```sh
+export LD_LIBRARY_PATH="./libs:$LD_LIBRARY_PATH"
 ```
 
 ### 🔳 Define macros
