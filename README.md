@@ -1,5 +1,6 @@
 # Cheatsheets
 
-### 🔹 [WSL](wsl.md)
+### 🔹 [WSL](WSL.md)
 
-### 🔹 [g++](g-plus-plus.md)
+### 🔹 [GCC / Clang](GCC-CLANG.md)
+
